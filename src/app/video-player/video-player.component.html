@@ -1,0 +1,15 @@
+<div id="video-container">
+  <video autoplay #videoRef></video>
+  <canvas #canvasRef width="600px" height="500px"></canvas>
+  <button (click)="takePicture()" class="btn btn-primary" id="take-photo-btn">&#1421;</button>
+</div>
+<div class="img-item-wrapper">
+  <div class="img-item"
+       *ngFor="let img of images; let imgIndex = index"
+       [class.preview]="previewingImage === img"
+       (click)="previewImage(img)">
+    <div class="preview-backdrop"></div>
+    <img [src]="img">
+    <button class="btn btn-danger remove-btn" (click)="removeImage(imgIndex)">X</button>
+  </div>
+</div>
