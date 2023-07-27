@@ -28,7 +28,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/main-worker.js",
+              "src/custom-worker.js"
             ],
             "styles": [
               "src/styles.scss"
