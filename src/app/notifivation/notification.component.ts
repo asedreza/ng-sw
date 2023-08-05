@@ -10,7 +10,7 @@ export class NotificationComponent implements OnInit {
   title: string = 'عنوان پیام';
   options: any = {
     body: 'متن پیام',
-    icon: 'src/assets/icons/icon-72x72.png'
+    icon: '/assets/icons/icon-72x72.png'
   };
   showModal!: boolean;
 
