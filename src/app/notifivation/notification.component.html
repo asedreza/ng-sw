@@ -1,0 +1,30 @@
+<button id="show-notif-modal-toggle" class="btn btn-primary" type="button" (click)="toggleModal()"> &#9993; </button>
+
+<div id="notif-form-modal" [class.show]="showModal">
+  <div id="notif-form-backdrop" (click)="toggleModal()"></div>
+  <div id="notif-form-wrapper">
+    <form #formRef="ngForm">
+      <div class="px-5">
+        <div class="mt-3">
+          <label for="title">عنوان</label>
+          <input class="form-control" id="title" name="title" [(ngModel)]="title">
+        </div>
+        <div class="mt-3">
+          <label for="body">بدنه</label>
+          <input class="form-control" id="body" name="body" [(ngModel)]="options.body">
+        </div>
+        <div class="mt-3">
+          <label for="dir">جهت</label>
+          <select class="form-control" id="dir" name="dir" [(ngModel)]="options.dir">
+            <option value="ltr">چپ چین</option>
+            <option value="rtl">راست چین</option>
+          </select>
+        </div>
+        <div class="mt-3 text-center">
+          <button class="btn btn-primary mx-2" (click)="onSubmit()">نمایش نوتیفیکیشن</button>
+          <button type="button" class="btn btn-warning" (click)="toggleModal()">خروج</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

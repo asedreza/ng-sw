@@ -21,7 +21,7 @@ self.addEventListener('activate', event => {
   console.log('activating Custom SW ...')
   event.waitUntil(
     caches.keys().then(allKeys => Promise.all(allKeys.map(key => {
-      if(key !== STATIC_CACHE){
+      if(key !== STATIC_CACHE && key !== DYNAMIC_CACHE){
         console.log('Removing old caches: ', key)
         return caches.delete(key)
       }
@@ -46,4 +46,12 @@ self.addEventListener('fetch', event => {
       }
     })
   )
+})
+
+self.addEventListener('notificationclick', event => {
+  console.log('notification clicked', event)
+})
+
+self.addEventListener('notificationclose', event => {
+  console.log('notification closed', event)
 })
