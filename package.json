@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "run:build": "npx http-server ./dist/ng-pwa/ --port 8080",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

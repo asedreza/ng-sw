@@ -33,7 +33,8 @@
               "src/custom-worker.js"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/bootstrap.min.css"
             ],
             "scripts": [],
             "serviceWorker": true,
